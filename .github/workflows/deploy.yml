@@ -18,4 +18,4 @@ jobs:
         run: npm install -g surge
 
       - name: Deploy to Surge.sh
-        run: surge --project ./path-to-your-html --domain your-surge-domain.surge.sh
+        run: surge --project ./index.html --domain jeffcoplin.surge.sh
