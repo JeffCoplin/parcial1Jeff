@@ -1,0 +1,21 @@
+name: Deploy to Surge
+
+on:
+  push:
+    branches:
+      - main
+      - dev
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Install Surge.sh
+        run: npm install -g surge
+
+      - name: Deploy to Surge.sh
+        run: surge --project ./path-to-your-html --domain your-surge-domain.surge.sh
